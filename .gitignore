@@ -42,7 +42,8 @@ build/Release
 # Dependency directories
 Frontend/node_modules/
 jspm_packages/
-Backend/.anchor/
+Backend (wsl)/.anchor/
+Backend (wsl)/Cargo.lock
 
 # TypeScript v1 declaration files
 typings/
