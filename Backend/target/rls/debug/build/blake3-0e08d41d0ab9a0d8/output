@@ -31,23 +31,23 @@ CFLAGS = None
 CRATE_CC_NO_DEFAULTS = None
 CARGO_CFG_TARGET_FEATURE = Some("fxsr,sse,sse2")
 DEBUG = Some("true")
-running: "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\bin\\HostX64\\x64\\ml64.exe" "-nologo" "-Fo\\\\wsl$\\Ubuntu\\home\\robertkottelin\\myepicproject\\target\\rls\\debug\\build\\blake3-0e08d41d0ab9a0d8\\out\\c/blake3_sse2_x86-64_windows_msvc.o" "-c" "c/blake3_sse2_x86-64_windows_msvc.asm"
+running: "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\bin\\HostX64\\x64\\ml64.exe" "-nologo" "-Fo\\\\wsl.localhost\\Ubuntu\\home\\robertkottelin\\vaccine-jounaling-system\\vaccinebackend\\target\\rls\\debug\\build\\blake3-0e08d41d0ab9a0d8\\out\\c/blake3_sse2_x86-64_windows_msvc.o" "-c" "c/blake3_sse2_x86-64_windows_msvc.asm"
  Assembling: c/blake3_sse2_x86-64_windows_msvc.asm
 exit code: 0
-running: "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\bin\\HostX64\\x64\\ml64.exe" "-nologo" "-Fo\\\\wsl$\\Ubuntu\\home\\robertkottelin\\myepicproject\\target\\rls\\debug\\build\\blake3-0e08d41d0ab9a0d8\\out\\c/blake3_sse41_x86-64_windows_msvc.o" "-c" "c/blake3_sse41_x86-64_windows_msvc.asm"
+running: "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\bin\\HostX64\\x64\\ml64.exe" "-nologo" "-Fo\\\\wsl.localhost\\Ubuntu\\home\\robertkottelin\\vaccine-jounaling-system\\vaccinebackend\\target\\rls\\debug\\build\\blake3-0e08d41d0ab9a0d8\\out\\c/blake3_sse41_x86-64_windows_msvc.o" "-c" "c/blake3_sse41_x86-64_windows_msvc.asm"
  Assembling: c/blake3_sse41_x86-64_windows_msvc.asm
 exit code: 0
-running: "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\bin\\HostX64\\x64\\ml64.exe" "-nologo" "-Fo\\\\wsl$\\Ubuntu\\home\\robertkottelin\\myepicproject\\target\\rls\\debug\\build\\blake3-0e08d41d0ab9a0d8\\out\\c/blake3_avx2_x86-64_windows_msvc.o" "-c" "c/blake3_avx2_x86-64_windows_msvc.asm"
+running: "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\bin\\HostX64\\x64\\ml64.exe" "-nologo" "-Fo\\\\wsl.localhost\\Ubuntu\\home\\robertkottelin\\vaccine-jounaling-system\\vaccinebackend\\target\\rls\\debug\\build\\blake3-0e08d41d0ab9a0d8\\out\\c/blake3_avx2_x86-64_windows_msvc.o" "-c" "c/blake3_avx2_x86-64_windows_msvc.asm"
  Assembling: c/blake3_avx2_x86-64_windows_msvc.asm
 exit code: 0
 AR_x86_64-pc-windows-msvc = None
 AR_x86_64_pc_windows_msvc = None
 HOST_AR = None
 AR = None
-running: "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\bin\\HostX64\\x64\\lib.exe" "-out:\\\\wsl$\\Ubuntu\\home\\robertkottelin\\myepicproject\\target\\rls\\debug\\build\\blake3-0e08d41d0ab9a0d8\\out\\libblake3_sse2_sse41_avx2_assembly.a" "-nologo" "\\\\wsl$\\Ubuntu\\home\\robertkottelin\\myepicproject\\target\\rls\\debug\\build\\blake3-0e08d41d0ab9a0d8\\out\\c/blake3_sse2_x86-64_windows_msvc.o" "\\\\wsl$\\Ubuntu\\home\\robertkottelin\\myepicproject\\target\\rls\\debug\\build\\blake3-0e08d41d0ab9a0d8\\out\\c/blake3_sse41_x86-64_windows_msvc.o" "\\\\wsl$\\Ubuntu\\home\\robertkottelin\\myepicproject\\target\\rls\\debug\\build\\blake3-0e08d41d0ab9a0d8\\out\\c/blake3_avx2_x86-64_windows_msvc.o"
+running: "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\bin\\HostX64\\x64\\lib.exe" "-out:\\\\wsl.localhost\\Ubuntu\\home\\robertkottelin\\vaccine-jounaling-system\\vaccinebackend\\target\\rls\\debug\\build\\blake3-0e08d41d0ab9a0d8\\out\\libblake3_sse2_sse41_avx2_assembly.a" "-nologo" "\\\\wsl.localhost\\Ubuntu\\home\\robertkottelin\\vaccine-jounaling-system\\vaccinebackend\\target\\rls\\debug\\build\\blake3-0e08d41d0ab9a0d8\\out\\c/blake3_sse2_x86-64_windows_msvc.o" "\\\\wsl.localhost\\Ubuntu\\home\\robertkottelin\\vaccine-jounaling-system\\vaccinebackend\\target\\rls\\debug\\build\\blake3-0e08d41d0ab9a0d8\\out\\c/blake3_sse41_x86-64_windows_msvc.o" "\\\\wsl.localhost\\Ubuntu\\home\\robertkottelin\\vaccine-jounaling-system\\vaccinebackend\\target\\rls\\debug\\build\\blake3-0e08d41d0ab9a0d8\\out\\c/blake3_avx2_x86-64_windows_msvc.o"
 exit code: 0
 cargo:rustc-link-lib=static=blake3_sse2_sse41_avx2_assembly
-cargo:rustc-link-search=native=\\wsl$\Ubuntu\home\robertkottelin\myepicproject\target\rls\debug\build\blake3-0e08d41d0ab9a0d8\out
+cargo:rustc-link-search=native=\\wsl.localhost\Ubuntu\home\robertkottelin\vaccine-jounaling-system\vaccinebackend\target\rls\debug\build\blake3-0e08d41d0ab9a0d8\out
 cargo:rerun-if-env-changed=CARGO_FEATURE_PURE
 cargo:rerun-if-env-changed=CARGO_FEATURE_PREFER_INTRINSICS
 cargo:rustc-cfg=blake3_avx512_ffi
@@ -65,17 +65,17 @@ CFLAGS = None
 CRATE_CC_NO_DEFAULTS = None
 CARGO_CFG_TARGET_FEATURE = Some("fxsr,sse,sse2")
 DEBUG = Some("true")
-running: "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\bin\\HostX64\\x64\\ml64.exe" "-nologo" "-Fo\\\\wsl$\\Ubuntu\\home\\robertkottelin\\myepicproject\\target\\rls\\debug\\build\\blake3-0e08d41d0ab9a0d8\\out\\c/blake3_avx512_x86-64_windows_msvc.o" "-c" "c/blake3_avx512_x86-64_windows_msvc.asm"
+running: "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\bin\\HostX64\\x64\\ml64.exe" "-nologo" "-Fo\\\\wsl.localhost\\Ubuntu\\home\\robertkottelin\\vaccine-jounaling-system\\vaccinebackend\\target\\rls\\debug\\build\\blake3-0e08d41d0ab9a0d8\\out\\c/blake3_avx512_x86-64_windows_msvc.o" "-c" "c/blake3_avx512_x86-64_windows_msvc.asm"
  Assembling: c/blake3_avx512_x86-64_windows_msvc.asm
 exit code: 0
 AR_x86_64-pc-windows-msvc = None
 AR_x86_64_pc_windows_msvc = None
 HOST_AR = None
 AR = None
-running: "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\bin\\HostX64\\x64\\lib.exe" "-out:\\\\wsl$\\Ubuntu\\home\\robertkottelin\\myepicproject\\target\\rls\\debug\\build\\blake3-0e08d41d0ab9a0d8\\out\\libblake3_avx512_assembly.a" "-nologo" "\\\\wsl$\\Ubuntu\\home\\robertkottelin\\myepicproject\\target\\rls\\debug\\build\\blake3-0e08d41d0ab9a0d8\\out\\c/blake3_avx512_x86-64_windows_msvc.o"
+running: "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\bin\\HostX64\\x64\\lib.exe" "-out:\\\\wsl.localhost\\Ubuntu\\home\\robertkottelin\\vaccine-jounaling-system\\vaccinebackend\\target\\rls\\debug\\build\\blake3-0e08d41d0ab9a0d8\\out\\libblake3_avx512_assembly.a" "-nologo" "\\\\wsl.localhost\\Ubuntu\\home\\robertkottelin\\vaccine-jounaling-system\\vaccinebackend\\target\\rls\\debug\\build\\blake3-0e08d41d0ab9a0d8\\out\\c/blake3_avx512_x86-64_windows_msvc.o"
 exit code: 0
 cargo:rustc-link-lib=static=blake3_avx512_assembly
-cargo:rustc-link-search=native=\\wsl$\Ubuntu\home\robertkottelin\myepicproject\target\rls\debug\build\blake3-0e08d41d0ab9a0d8\out
+cargo:rustc-link-search=native=\\wsl.localhost\Ubuntu\home\robertkottelin\vaccine-jounaling-system\vaccinebackend\target\rls\debug\build\blake3-0e08d41d0ab9a0d8\out
 cargo:rerun-if-env-changed=CARGO_FEATURE_NO_NEON
 cargo:rerun-if-env-changed=CARGO_FEATURE_PURE
 cargo:rerun-if-env-changed=CC

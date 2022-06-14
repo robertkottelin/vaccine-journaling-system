@@ -6,8 +6,7 @@ import { Connection, PublicKey, clusterApiUrl } from '@solana/web3.js';
 import { Program, Provider, web3 } from '@project-serum/anchor';
 import kp from './keypair.json';
 import {} from 'react-bootstrap';
-
-
+var idToRemove;
 // SystemProgram is a reference to the Solana runtime!
 const { SystemProgram, Keypair } = web3;
 
@@ -42,7 +41,6 @@ const App = () => {
   const [walletAddress, setWalletAddress] = useState(null);
   const [inputValue, setInputValue] = useState(''); 
   const [inputValueData, setInputValueData] = useState('');
-  const [gifList, setGifList] = useState([]);
   const [dataList, setDataList] = useState([]);
 
   // Actions
@@ -133,6 +131,7 @@ const App = () => {
     }
   };
 
+
   const onInputChange = (event) => {
     const { value } = event.target;
     setInputValue(value);
@@ -183,11 +182,6 @@ const App = () => {
   );
   */
 
-  const assignData = dataList.map(function(item) {
-    return {
-      dataList: item.dataLink,
-    };
-  });
 
   //console.log("dataList:", dataList)
 
@@ -229,9 +223,21 @@ const App = () => {
                 <div className="card-body">
                   <h5 className="card-title">{dataitem.dataLink} </h5>
                   <h6 className="card-subtitle mb-2 text-muted">Date: {}</h6>
+                  <h6 className="card-subtitle mb-2 text-muted">Index: {index}</h6>
                   <a href="#" className="card-link">Edit entry</a>
                   <a href="#" className="card-link">Delete entry</a>
                 </div>
+                <form
+              onSubmit={(event) => {
+                event.preventDefault();
+                idToRemove = index;
+                removeElementInDataList(idToRemove);
+              }}
+            >
+              <button className="card-link">
+                Delete
+              </button>
+            </form>
                 </div>
               )
             })}
@@ -280,7 +286,33 @@ const App = () => {
       const account = await program.account.baseAccount.fetch(baseAccount.publicKey);
       
       console.log("Got the account", account)
-      setDataList(account.dataList)
+      await setDataList(account.dataList)
+  
+    } catch (error) {
+      console.log("Error in getDataList: ", error)
+      setDataList(null);
+    }
+  }
+
+  useEffect(() => {
+    if (walletAddress) {
+      console.log('Fetching Data list...');
+      getDataList()
+    }
+  }, [walletAddress]);
+
+
+  const removeElementInDataList = async(idToRemove) => {
+    try {
+      const provider = getProvider();
+      const program = new Program(idl, programID, provider);
+      const account = await program.account.baseAccount.fetch(baseAccount.publicKey);
+      
+      console.log("Got the account", account);
+      await account.dataList.splice(idToRemove, 1);
+
+      await setDataList(account.dataList);
+
   
     } catch (error) {
       console.log("Error in getDataList: ", error)
@@ -288,12 +320,7 @@ const App = () => {
     }
   }
   
-  useEffect(() => {
-    if (walletAddress) {
-      console.log('Fetching Data list...');
-      getDataList()
-    }
-  }, [walletAddress]);
+
 
   
 

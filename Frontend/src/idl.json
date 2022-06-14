@@ -1,9 +1,9 @@
 {
   "version": "0.1.0",
-  "name": "myepicproject",
+  "name": "vaccinebackend",
   "instructions": [
     {
-      "name": "startStuffOff",
+      "name": "initialize",
       "accounts": [
         {
           "name": "baseAccount",
@@ -24,7 +24,7 @@
       "args": []
     },
     {
-      "name": "addGif",
+      "name": "addData",
       "accounts": [
         {
           "name": "baseAccount",
@@ -39,28 +39,7 @@
       ],
       "args": [
         {
-          "name": "gifLink",
-          "type": "string"
-        }
-      ]
-    },
-    {
-      "name": "setData",
-      "accounts": [
-        {
-          "name": "baseAccount",
-          "isMut": true,
-          "isSigner": false
-        },
-        {
-          "name": "user",
-          "isMut": true,
-          "isSigner": true
-        }
-      ],
-      "args": [
-        {
-          "name": "dataLink",
+          "name": "data",
           "type": "string"
         }
       ]
@@ -73,26 +52,14 @@
         "kind": "struct",
         "fields": [
           {
-            "name": "totalGifs",
+            "name": "totalDataEntries",
             "type": "u64"
           },
           {
-            "name": "totalData",
-            "type": "u64"
-          },
-          {
-            "name": "gifList",
+            "name": "dataStructVector",
             "type": {
               "vec": {
-                "defined": "ItemStruct"
-              }
-            }
-          },
-          {
-            "name": "dataList",
-            "type": {
-              "vec": {
-                "defined": "Data"
+                "defined": "DataStruct"
               }
             }
           }
@@ -102,28 +69,12 @@
   ],
   "types": [
     {
-      "name": "ItemStruct",
+      "name": "DataStruct",
       "type": {
         "kind": "struct",
         "fields": [
           {
-            "name": "gifLink",
-            "type": "string"
-          },
-          {
-            "name": "userAddress",
-            "type": "publicKey"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Data",
-      "type": {
-        "kind": "struct",
-        "fields": [
-          {
-            "name": "dataLink",
+            "name": "data",
             "type": "string"
           },
           {
@@ -135,6 +86,6 @@
     }
   ],
   "metadata": {
-    "address": "F6pE1t32WvhFdrc8AZSSQfy4dzgYUtf5muexBh1RHxB9"
+    "address": "HCjp3FqbKxuHbxrSSMDE7DEzY3jkprmF5vfchJoFEwcE"
   }
 }

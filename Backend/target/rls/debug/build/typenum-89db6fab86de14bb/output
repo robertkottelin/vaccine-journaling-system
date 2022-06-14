@@ -1,2 +1,2 @@
-cargo:rustc-env=TYPENUM_BUILD_CONSTS=\\wsl$\Ubuntu\home\robertkottelin\myepicproject\target\rls\debug\build\typenum-89db6fab86de14bb\out\consts.rs
-cargo:rustc-env=TYPENUM_BUILD_OP=\\wsl$\Ubuntu\home\robertkottelin\myepicproject\target\rls\debug\build\typenum-89db6fab86de14bb\out\op.rs
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=\\wsl.localhost\Ubuntu\home\robertkottelin\vaccine-jounaling-system\vaccinebackend\target\rls\debug\build\typenum-89db6fab86de14bb\out\consts.rs
+cargo:rustc-env=TYPENUM_BUILD_OP=\\wsl.localhost\Ubuntu\home\robertkottelin\vaccine-jounaling-system\vaccinebackend\target\rls\debug\build\typenum-89db6fab86de14bb\out\op.rs

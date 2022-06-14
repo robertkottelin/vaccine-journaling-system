@@ -1,7 +1,7 @@
 [features]
 seeds = false
 [programs.devnet]
-myepicproject = "F6pE1t32WvhFdrc8AZSSQfy4dzgYUtf5muexBh1RHxB9"
+vaccinebackend = "HCjp3FqbKxuHbxrSSMDE7DEzY3jkprmF5vfchJoFEwcE"
 
 [registry]
 url = "https://anchor.projectserum.com"
@@ -11,4 +11,4 @@ cluster = "devnet"
 wallet = "/home/robertkottelin/.config/solana/id.json"
 
 [scripts]
-test = "node tests/myepicproject.js"
+test = "yarn run mocha -t 1000000 tests/"
